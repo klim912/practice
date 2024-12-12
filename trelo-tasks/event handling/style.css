@@ -1,0 +1,31 @@
+.test-form{
+    display: flex;
+    flex-direction: column;   
+    gap: 15px;
+}
+.input{
+    width: 200px;
+    height: 20px;  
+}
+
+.submit-button{
+    margin-top: 10px;
+    max-width: 60px; 
+}
+
+.passwd-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-text {
+    display: none;
+    background: #f1f1f1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    position: absolute;
+    margin-top: 5px;
+    z-index: 10;
+    top: 2px;
+    left: 350px;
+}
