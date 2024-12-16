@@ -1,0 +1,54 @@
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+}
+
+a {
+    text-decoration:  none;
+    cursor: pointer;
+    color: black;
+}
+a:hover{
+    color:cadetblue;
+    transition: 1ms;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper{
+    max-width: 1440px;
+    max-height: 800px;
+}
+
+.content__zone{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content__zone-row{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.content__card{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    font-size: 50px;
+}
