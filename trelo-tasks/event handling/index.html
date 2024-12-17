@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="test-form" method="post" class="test-form">
+        <div class="name-section">
+            <label for="name">Enter your Name:</label>
+            <input type="text" class="input" id="name" name="name" placeholder="Your Name" required  pattern="[A-Za-zА-Яа-яЁёЇїІіЄєҐґ]+" autocomplete="off">
+            <div class="tool-text" id="tool-text-name">Використовуйте лише літери(А-Я, A-Z)</div>
+        </div>
+        <div class="email-section">
+            <label for="email">Enter your e-mail addres:</label>
+            <input type="email" class="input" id="email" name="email" placeholder="Your E-mail" required autocomplete="off">
+            <div class="tool-text" id="tool-text-email">E-mail має відповідати: example@example.com</div>
+        </div>    
+        <div class="passwd-section">
+            <div class="passwd-header">
+                <label for="password">Enter your password:</label>
+                <input type="password" class="input" id="password_area" name="password" placeholder="Password" minlength="8" maxlength="20" required>
+                <div class="tool-text" id="tool-text-password">Пароль має складатися з 8-20 символів</div>
+            </div>
+            <div class="passwd-footer">
+                <input type="checkbox" onclick="showPassword()">Show Password   
+            </div>
+        </div>
+        <input type="submit" value="Submit" class="submit-button">
+    </form>  
+    <div id="output" style="margin-top: 50px;"></div>
+</body>
+<script src="script.js"></script>
+</html>
