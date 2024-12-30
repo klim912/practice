@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 150px;
+}
+
+.gallery-item img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.gallery-item button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgb(255, 255, 255);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.gallery-item p {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.lightbox img {
+    width: 80%; 
+    height: auto; 
+    max-height: 70%; 
+    object-fit: contain; 
+    border-radius: 10px; 
+}
+
+.lightbox p {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+.lightbox-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 50px;
+}
+
+.lightbox-controls button {
+    background: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-controls button:hover {
+    background: #ddd;   
+}
+
+#prev-btn img, #next-btn img {
+    width: 40px;
+    height: 40px;
+}
