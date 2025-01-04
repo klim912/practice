@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <select id="elementTypeSelector" title="Add Element">
+            <option value="p" selected>Add Paragraph</option>
+            <option value="h1">Add Heading 1</option>
+            <option value="h2">Add Heading 2</option>
+            <option value="blockquote">Add Blockquote</option>
+            <option value="ul">Add Unordered List</option>
+        </select>
+        <button id="addElement">Add Element</button>
+        <button id="bold">Bold</button>
+        <button id="italic">Italic</button>
+        <input type="color" id="colorPicker" title="Highlight Text Color">
+        <select id="fontSizeSelector" title="Font Size">
+            <option value="1">Extra Small</option>
+            <option value="2">Small</option>
+            <option value="3" selected>Normal</option>
+            <option value="4">Large</option>
+            <option value="5">Extra Large</option>
+            <option value="6">Huge</option>
+            <option value="7">Massive</option>
+        </select>
+        <button id="save">Save</button>
+        <button id="clear">Clear</button>
+    </div>
+    <div id="content" contenteditable="true" class="content-area">
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
