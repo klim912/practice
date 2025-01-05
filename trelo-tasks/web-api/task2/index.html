@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoAudio Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+
+  <div id="controls">
+    <h3>Current Location: <span id="location">Detecting...</span></h3>
+    <div id="audio-player">
+      <audio id="audio" controls preload="auto" volume="0.1">
+        <source src="" type="audio/mp3" >
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div id="status">Loading...</div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>
