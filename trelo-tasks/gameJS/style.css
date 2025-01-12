@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background: url('img/1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.player-info,
+.enemy-info {
+    width: 45%;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ffc107;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.player-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.player-avatar::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 20px;
+    border: 5px solid #d4af37;
+    background: linear-gradient(45deg, #d4af37, #f2c400, #ff8c00);
+    box-shadow: 0 0 25px 10px rgba(255, 165, 0, 0.5);
+    z-index: -1;
+}
+
+.player-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.player-info p {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cc9a03;
+    width: 60%;
+    margin: 0 auto 8px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out;
+}
+
+.player-info p:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.enemy-avatar {
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ff5722;
+
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #cc9a03;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ffc107;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.game-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffc107;
+    text-align: center;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.game-progress-container {
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.game-progress {
+    width: 0;
+    height: 100%;
+    background-color: #ffc107;
+    border-radius: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.popup h3,
+.popup h4 {
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.item-details {
+    margin-bottom: 15px;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#inventory-popup ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#inventory-popup li {
+    margin-bottom: 10px;
+}
+
+#inventory-popup button {
+    margin-left: 10px;
+}
+
+#item-popup button {
+    background-color: #ffc107;
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+
+.inventory {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 5px;
+    margin-left: 90px;
+    max-width: 200px;
+    place-items: center;
+}
+
+.inventory-slot {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.item-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.item-quantity {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .game-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player-info,
+    .enemy-info {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Створення Персонажа</title>
+    <link rel="stylesheet" href="characters.css">
+</head>
+<body>
+    <div id="character-creation-container">
+        <h1>Створіть свого персонажа</h1>
+
+        <form id="create-character-form">
+            <label for="nickname">Ваш нікнейм:</label>
+            <input type="text" id="nickname" required>
+
+            <h3>Вибір аватара</h3>
+            <div id="avatars">
+            </div>
+
+            <h3>Вибір класу персонажа</h3>
+            <div id="classes">
+                <label>
+                    <input type="radio" name="class" value="Воїн" onchange="updateAvatars('warrior')">
+                    <img src="path/to/warrior-class.png" alt="Воїн" class="class-img">
+                </label>
+                <label>
+                    <input type="radio" name="class" value="Маг" onchange="updateAvatars('mage')">
+                    <img src="path/to/mage-class.png" alt="Маг" class="class-img">
+                </label>
+                <label>
+                    <input type="radio" name="class" value="Стрілець" onchange="updateAvatars('archer')">
+                    <img src="path/to/archer-class.png" alt="Стрілець" class="class-img">
+                </label>
+            </div>
+
+            <button type="button" onclick="createCharacter()">Створити персонажа</button>
+        </form>
+    </div>
+
+    <script src="create-character.js"></script>
+</body>
+</html>
