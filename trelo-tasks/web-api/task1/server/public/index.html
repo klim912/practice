@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Чат</header>
+
+    <div id="registrationForm" class="hidden">
+        <h2>Реєстрація</h2>
+        <input type="text" id="regUsername" placeholder="Введіть ім'я" required>
+        <input type="password" id="regPassword" placeholder="Введіть пароль" required>
+        <button id="registerButton">Зареєструватися</button>
+        <div class="register-link">
+            <a href="#" id="goToLogin">Вже є акаунт? Увійти</a>
+        </div>
+    </div>
+
+    <div id="loginForm" class="hidden">
+        <h2>Авторизація</h2>
+        <input type="text" id="username" placeholder="Введіть ім'я" required>
+        <input type="password" id="password" placeholder="Введіть пароль" required>
+        <button id="loginButton">Увійти</button>
+        <div class="register-link">
+            <a href="#" id="goToRegister">Зареєструватися</a>
+        </div>
+    </div>
+
+    <div id="chatContainer" class="hidden">
+        <h2>Чат</h2>
+        <div id="messages"></div>
+        <input id="messageInput" type="text" placeholder="Введіть повідомлення">
+        <button id="sendButton">Надіслати</button>
+        <div id="userList"></div>
+        <button id="logoutButton">Вийти</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

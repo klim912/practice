@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фентезі гра</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-info">
+            <div class="player-info">
+                <h2>Інформація про гравця</h2>
+                <div class="avatar-container player-avatar">
+                    <img id="player-avatar" class="avatar-img" src="" alt="Аватар гравця">
+                </div>
+                <p>Нікнейм: <span id="player-nickname">Невідомо</span></p>
+                <p>Клас: <span id="player-class">Невідомо</span></p>
+                <p>Здоров'я: <span id="player-health">100</span></p>
+                <p>Сила: <span id="player-strength">10</span></p>
+                <p>Оборона: <span id="player-defense">10</span></p>
+                <p>Рівень: <span id="player-level">1</span></p>
+                <h4>Інвентар</h4>
+                <div class="inventory">
+                    <div class="inventory-slot" onclick="useItemFromSlot(0)">
+                        <img class="item-icon" src="" alt="" style="display: none;">
+                        <span class="item-quantity">0</span>
+                    </div>
+                    <div class="inventory-slot" onclick="useItemFromSlot(1)">
+                        <img class="item-icon" src="" alt="" style="display: none;">
+                        <span class="item-quantity">0</span>
+                    </div>
+                    <div class="inventory-slot" onclick="useItemFromSlot(2)">
+                        <img class="item-icon" src="" alt="" style="display: none;">
+                        <span class="item-quantity">0</span>
+                    </div>
+                    <div class="inventory-slot" onclick="useItemFromSlot(3)">
+                        <img class="item-icon" src="" alt="" style="display: none;">
+                        <span class="item-quantity">0</span>
+                    </div>
+                    <div class="inventory-slot" onclick="useItemFromSlot(4)">
+                        <img class="item-icon" src="" alt="" style="display: none;">
+                        <span class="item-quantity">0</span>
+                    </div>
+                    <div class="inventory-slot" onclick="useItemFromSlot(5)">
+                        <img class="item-icon" src="" alt="" style="display: none;">
+                        <span class="item-quantity">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="enemy-info" style="display: none;">
+                <h2>Інформація про ворога</h2>
+                <div id="enemy-avatar" class="avatar-container enemy-avatar"></div>
+                <p>Здоров'я ворога: <span id="enemy-health">-</span></p>
+            </div>            
+        </div>
+
+        <div class="game-controls">
+            <button id="start-game" onclick="startGame()">Почати гру</button>
+            <button id="next-step" onclick="nextStep()" disabled>Наступний крок</button>
+            <button id="attack" onclick="playerAttack()" disabled>Атакувати</button>
+            <button id="restart-game" onclick="restartGame()" style="display:none;">Перезапустити гру</button>
+        </div>
+
+        <div id="game-message" class="game-message">Вітаємо в грі! Натисніть 'Старт' для початку.</div>
+        
+        <div id="game-progress-container" class="game-progress-container">
+            <div id="game-progress" class="game-progress"></div>
+        </div>
+
+        <div id="inventory-popup" class="popup">
+            <h3>Інвентар</h3>
+            <ul id="inventory-list"></ul>
+        </div>
+
+        <div id="item-popup" class="popup">
+            <h4>Предмет</h4>
+            <div class="item-details">
+                <img id="item-image" class="item-image" src="" alt="">
+                <p id="item-description"></p>
+            </div>
+            <button onclick="closeItemPopup()">Закрити</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
