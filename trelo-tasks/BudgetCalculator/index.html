@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Бюджету</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="left-section">
+            <h2>📊 Калькулятор Бюджету</h2>
+
+            <div class="balance-box">
+                <h3>Загальний баланс</h3>
+                <p id="balance">0 грн</p>
+            </div>
+
+            <div class="input-container">
+                <input type="number" id="amount" placeholder="Сума">
+                <input type="text" id="category" placeholder="Категорія">
+                <input type="date" id="date">
+                <select id="type">
+                    <option value="income">Дохід</option>
+                    <option value="expense">Витрата</option>
+                </select>
+                <button onclick="addEntry()">➕ Додати</button>
+            </div>
+
+            <div class="report-section">
+                <input type="text" id="reportName" placeholder="Назва звіту">
+                <select id="reportType">
+                    <option value="month">За місяць</option>
+                    <option value="category">За категорією</option>
+                </select>
+                <button class="report-btn" onclick="saveReport()">📜 Зберегти звіт</button>
+                <button class="view-reports-btn" onclick="window.location.href='reports.html'">📂 Переглянути
+                    звіти</button>
+            </div>
+
+        </div>
+
+        <div class="right-section">
+            <h3>🧾 Чек</h3>
+            <div class="receipt">
+                <div class="receipt-header">
+                    <p>🛒 Всі доходи/витрати</p>
+                    <p>Поточна дата: <span id="currentDate"></span></p>
+                    <p>=========================</p>
+                </div>
+                <div id="entries"></div>
+                <div class="receipt-footer">
+                    <p>=========================</p>
+                    <p><strong>Залишок:</strong> <span id="remainingBalance">0 грн</span></p>
+                    <p>=========================</p>
+                    <p>Витрачайте менше, ніж заробляєте, і завжди відкладайте частину доходу на фінансову подушку!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
