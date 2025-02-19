@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <h1>Task Manager</h1>
+  <div class="create-section">
+    <button id="createBtn" onclick="openCreatePopup()">Створити нове завдання</button>
+  </div>
+  <div class="board">
+    <div class="column new">
+      <h2>Нові</h2>
+      <div class="sort-buttons">
+        <button onclick="sortTasks('нове', 'desc')">Від високого</button>
+        <button onclick="sortTasks('нове', 'asc')">Від низького</button>
+      </div>
+      <div class="task-list" data-status="нове"></div>
+    </div>
+    <div class="column in-progress">
+      <h2>У процесі</h2>
+      <div class="sort-buttons">
+        <button onclick="sortTasks('в процесі', 'desc')">Від високого</button>
+        <button onclick="sortTasks('в процесі', 'asc')">Від низького</button>
+      </div>
+      <div class="task-list" data-status="в процесі"></div>
+    </div>
+    <div class="column completed">
+      <h2>Виконано</h2>
+      <div class="sort-buttons">
+        <button onclick="sortTasks('завершено', 'desc')">Від високого</button>
+        <button onclick="sortTasks('завершено', 'asc')">Від низького</button>
+      </div>
+      <div class="task-list" data-status="завершено"></div>
+    </div>
+  </div>
+  <div id="popup-overlay"></div>
+  <div id="popup">
+    <h3>Деталі завдання</h3>
+    <form id="popupForm">
+      <label>Назва завдання</label>
+      <input type="text" id="popupName">
+      <label>Опис завдання</label>
+      <textarea id="popupDescription" rows="3" style="resize: none;"></textarea>
+      <label>Пріоритет</label>
+      <select id="popupPriority">
+        <option value="високий">Високий</option>
+        <option value="середній">Середній</option>
+        <option value="низький">Низький</option>
+      </select>
+      <label>Статус</label>
+      <select id="popupStatus">
+        <option value="нове">Нове</option>
+        <option value="в процесі">У процесі</option>
+        <option value="завершено">Завершено</option>
+      </select>
+      <button type="button" class="save" onclick="saveTask()">Зберегти</button>
+      <button type="button" class="delete" onclick="deleteTask()">Видалити</button>
+      <button type="button" class="cancel" onclick="closePopup()">Скасувати</button>
+    </form>
+  </div>
+
+  <div id="popup-create">
+    <h3>Створити нове завдання</h3>
+    <form>
+      <label>Назва завдання</label>
+      <input type="text" id="createTitle" required>
+      <label>Опис завдання</label>
+      <textarea id="createDescription"></textarea>
+      <label>Пріоритет</label>
+      <select id="createPriority">
+        <option value="високий">Високий</option>
+        <option value="середній">Середній</option>
+        <option value="низький">Низький</option>
+      </select>
+      <button type="button" class="save" onclick="createTask()">Створити</button>
+      <button type="button" class="cancel" onclick="closeCreatePopup()">Скасувати</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

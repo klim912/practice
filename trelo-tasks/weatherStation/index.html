@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Dashboard</h1>
+    <div class="controls">
+      <input type="text" id="cityInput" placeholder="Enter city..." />
+      <button id="fetchWeather">Get Weather</button>
+    </div>
+
+    <div id="forecastBlock" class="forecast">
+      <img id="forecastImage" src="img/forecast.gif" alt="Weather icon" />
+      <p id="forecastText" style="transition: opacity 0.3s ease-in-out;">Weather forecast will appear here.</p>
+    </div>
+
+    <div id="tablesContainer">
+      <div class="tableWrapper">
+        <h3>Temperature</h3>
+        <table id="tempTable" class="styledTable">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>City</th>
+              <th>Temperature</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="tableWrapper">
+        <h3>Humidity</h3>
+        <table id="humidityTable" class="styledTable">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>City</th>
+              <th>Humidity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="tableWrapper">
+        <h3>Pressure</h3>
+        <table id="pressureTable" class="styledTable">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>City</th>
+              <th>Pressure</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="historySection" class="hidden">
+      <h2>Weather History</h2>
+      <table id="historyTable" class="styledTable">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>City</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Pressure</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="clearHistory">Clear History</button>
+    </div>
+
+    <button id="showHistory">Toggle History</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

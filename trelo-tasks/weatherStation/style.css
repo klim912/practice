@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  #cityInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #fetchWeather, #clearHistory, #showHistory {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s;
+  }
+  
+  #fetchWeather:hover, #clearHistory:hover, #showHistory:hover {
+    background: #3e8e41;
+  }
+  
+  #tablesContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .tableWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .styledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .styledTable thead tr {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .styledTable th, .styledTable td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .styledTable tbody tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .styledTable tbody tr:hover {
+    background: #f1f1f1;
+  }
+  
+  #historySection {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .history-fade-in {
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  .history-fade-out {
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  .appear {
+    animation: slideIn 0.5s forwards;
+  }
+  
+  .disappear {
+    animation: fadeOut 0.5s forwards;
+  }
+
+  .forecast {
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .forecast img {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+  }
+  
+  .forecast p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  #forecastText {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
